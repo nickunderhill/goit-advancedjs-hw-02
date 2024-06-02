@@ -61,16 +61,12 @@ function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
 
-function switchInputState(disabled) {
-    startButton.disabled = disabled;
-    datetimePicker.disabled = disabled;
-}
-
 function clickStartHandler() {
   if (timerInterval) {
     clearInterval(timerInterval);
   }
-  switchInputState(true);
+  startButton.disabled = true;
+  datetimePicker.disabled = true;
   iziToast.success({
     title: 'Started',
     message: 'Countdown has started!',
@@ -87,7 +83,7 @@ function clickStartHandler() {
         title: 'Completed',
         message: 'Countdown has ended!',
       });
-      switchInputState(false);
+      datetimePicker.disabled = false;
       return;
     }
 

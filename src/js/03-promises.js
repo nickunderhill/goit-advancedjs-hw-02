@@ -16,12 +16,19 @@ function createPromise(position, delay) {
   });
 }
 
+function resetForm() {
+  form.elements.delay.value = null;
+  form.elements.step.value = null;
+  form.elements.amount.value = null;
+}
+
 function handleSubmitForm() {
   event.preventDefault();
   
   const delay = Number(form.elements.delay.value);
   const step = Number(form.elements.step.value);
   const amount = Number(form.elements.amount.value);
+  resetForm();
 
   for (let i = 1; i <= amount; i++) {
     const currentDelay = delay + step * (i - 1);

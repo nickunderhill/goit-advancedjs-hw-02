@@ -32,24 +32,34 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
 }
 button[data-start] {
   background-color: #28a745;
   color: white;
 }
+
 button[data-start]:hover {
   background-color: #218838;
 }
+
 button[data-start]:disabled {
   background-color: #94d3a2;
   cursor: not-allowed;
 }
+
 button[data-stop] {
   background-color: #dc3545;
   color: white;
 }
+
 button[data-stop]:hover {
   background-color: #c82333;
+}
+
+button[data-stop]:disabled {
+  background-color: #f26977;
+  cursor: not-allowed;
 }
 
 /* Timer */
