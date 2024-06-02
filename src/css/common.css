@@ -58,7 +58,7 @@ button[data-stop]:hover {
 }
 
 button[data-stop]:disabled {
-  background-color: #f26977;
+  background-color: #f26977b3;
   cursor: not-allowed;
 }
 
